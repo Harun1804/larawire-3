@@ -4,15 +4,15 @@
         <form wire:submit="save">
             <div class="mb-4">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" wire:model="title" class="form-control" id="title" />
-                @error('title')
+                <input type="text" wire:model="form.title" class="form-control" id="title" />
+                @error('form.title')
                     <small class="text-danger d-block mt-1">{{ $message }}</small>
                 @enderror
             </div>
             <div class="mb-4">
                 <label for="body" class="form-label">Body</label>
-                <textarea wire:model="body" class="form-control" id="body" rows="3"></textarea>
-                @error('body')
+                <textarea wire:model="form.body" class="form-control" id="body" rows="3"></textarea>
+                @error('form.body')
                     <small class="text-danger d-block mt-1">{{ $message }}</small>
                 @enderror
             </div>
